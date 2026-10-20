@@ -1,0 +1,34 @@
+# A template sensor for the Tessera tile "Camper level". Put it in configuration.yaml (or a file it includes) and
+# restart Home Assistant once; after that, Developer tools > YAML > Template entities reloads it.
+#
+# The level sensor (ESP32 + BNO085, MQTT discovery) makes one entity per value. Write their entity ids below: open the
+# device under Settings > Devices & services > MQTT and copy them. The ids here are the ones of the original firmware
+# (device "WoWa Neigungssensor"); a fork with another device name has other ones.
+template:
+  - sensor:
+      - name: Camper level for screens
+        unique_id: camper_level_for_screens
+        icon: mdi:angle-acute
+        unit_of_measurement: "°"
+        variables:
+          pitch_entity: sensor.wowa_neigungssensor_pitch
+          roll_entity: sensor.wowa_neigungssensor_roll
+          # The four wedges of a motorhome in cm; leave them as they are when the sensor has none.
+          wedge_fl_entity: sensor.wowa_neigungssensor_keil_vl
+          wedge_fr_entity: sensor.wowa_neigungssensor_keil_vr
+          wedge_rl_entity: sensor.wowa_neigungssensor_keil_hl
+          wedge_rr_entity: sensor.wowa_neigungssensor_keil_hr
+        # Unavailable while the sensor is offline (its Last Will), so the tile greys out.
+        availability: >
+          {{ has_value(pitch_entity) and has_value(roll_entity) }}
+        # The larger of the two angles: how far from level the vehicle stands.
+        state: >
+          {{ [states(pitch_entity) | float(0) | abs, states(roll_entity) | float(0) | abs] | max | round(1) }}
+        attributes:
+          pitch: "{{ states(pitch_entity) | float(0) | round(1) }}"
+          roll: "{{ states(roll_entity) | float(0) | round(1) }}"
+          # -1 when the sensor has no such wedge.
+          wedge_fl: "{{ states(wedge_fl_entity) | float(-1) | round(1) }}"
+          wedge_fr: "{{ states(wedge_fr_entity) | float(-1) | round(1) }}"
+          wedge_rl: "{{ states(wedge_rl_entity) | float(-1) | round(1) }}"
+          wedge_rr: "{{ states(wedge_rr_entity) | float(-1) | round(1) }}"
