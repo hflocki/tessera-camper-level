@@ -1,0 +1,43 @@
+# A spirit level for a camper: the bubble, and a van from the side (pitch) and from behind (roll) that tilts as the
+# vehicle does, green when it stands level. The values come from one template sensor in Home Assistant that gathers
+# pitch, roll and the wedge heights of an ESP32 + BNO085 level sensor (MQTT); a tap opens the wedges of the four wheels.
+# No internet service of its own. Every field is explained in docs/MANIFEST.md of tessera-plugins.
+id: camper_level
+version: 0.1.0
+# 0.9: Font::DIGITS, Tone::GOOD, ui::set_fill and ui::tone_color; a tile of an entity with has_attributes needs 0.5.
+api: "0.9"
+icon: angle-acute
+maintainer: hflocki
+license: MIT
+stage: beta
+topics: [travel, home]
+requires:
+  esphome: 2026.6.2
+boards: any
+flash_kb: 12
+
+tiles:
+  - id: level
+    name: tile_name
+    icon: angle-acute
+    sizes: { min: 1x1, max: 4x3 }
+    # The bubble (a ring, two lines, the bubble), two vans of four lines and two wheels each, three labels.
+    memory: 2600
+    # The template sensor of the README: pitch and roll in degrees, the wedges in cm. Only sensors with pitch and roll
+    # are offered in the inspector.
+    domains: [sensor]
+    has_attributes: [pitch, roll]
+    attributes: [pitch, roll, wedge_fl, wedge_fr, wedge_rl, wedge_rr]
+    example: tile_example
+    preview: { title: "{name}", value: "{pitch}° / {roll}°" }
+    options:
+      - { id: good, kind: number, min: 0.5, max: 5, step: 0.5, default: 1, unit: "°", label: good, hint: good_hint }
+      - { id: warn, kind: number, min: 1, max: 10, step: 0.5, default: 3, unit: "°", label: warn, hint: warn_hint }
+      - { id: scale, kind: number, min: 2, max: 20, step: 1, default: 10, unit: "°", label: scale, hint: scale_hint }
+      - { id: gain, kind: number, min: 1, max: 6, step: 1, default: 3, label: gain, hint: gain_hint }
+      - { id: invert_pitch, kind: toggle, default: false, label: invert_pitch, hint: invert_hint }
+      - { id: invert_roll, kind: toggle, default: false, label: invert_roll }
+
+cards:
+  # A tap on the tile: pitch and roll large, and how high a wedge each wheel needs.
+  - { id: wedges, name: card_name, wide: false }

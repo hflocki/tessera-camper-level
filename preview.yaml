@@ -1,0 +1,48 @@
+# What tools/preview.py shows (docs/PREVIEW.md): the template sensor of home_assistant/ as Home Assistant has it, once
+# nearly level and once standing on a slope, and a tile whose sensor is offline.
+tiles:
+  - tile: level
+    name: Level
+    entity: sensor.camper_level_for_screens
+  - tile: level
+    name: On a slope
+    entity: sensor.camper_level_on_slope
+    sizes: [1x1, 2x1, 2x2, 1x2]
+  - tile: level
+    name: Offline
+    entity: sensor.camper_level_offline
+    sizes: [1x1, 2x1]
+  - tile: level
+    name: No sensor yet
+    sizes: [2x1]
+
+cards:
+  - { card: wedges, entity: sensor.camper_level_on_slope }
+
+states:
+  sensor.camper_level_for_screens:
+    state: "1.8"
+    attributes:
+      friendly_name: Camper level for screens
+      unit_of_measurement: "°"
+      pitch: 0.6
+      roll: -1.8
+      wedge_fl: 0
+      wedge_fr: 2.5
+      wedge_rl: 1.1
+      wedge_rr: 3.6
+  sensor.camper_level_on_slope:
+    state: "4.2"
+    attributes:
+      friendly_name: Camper level on a slope
+      unit_of_measurement: "°"
+      pitch: 4.2
+      roll: 0.4
+      wedge_fl: 0
+      wedge_fr: 0
+      wedge_rl: 6.8
+      wedge_rr: 7.3
+  sensor.camper_level_offline:
+    state: unavailable
+    attributes:
+      friendly_name: Camper level offline
