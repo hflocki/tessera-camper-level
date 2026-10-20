@@ -1,0 +1,34 @@
+{
+  "_meta": { "name": "English" },
+  "screen": {
+    "decimal": ".",
+    "choose": "Choose the level sensor",
+    "offline": "Sensor offline",
+    "pitch": "Pitch",
+    "roll": "Roll",
+    "level": "Level",
+    "wedges": "Wedges",
+    "no_wedges": "No wedge values in the sensor",
+    "front": "Front",
+    "rear": "Rear",
+    "cm": "{n} cm"
+  },
+  "app": {
+    "name": "Camper level",
+    "summary": "A spirit level for your camper: bubble, tilting vans for pitch and roll, and the wedges per wheel.",
+    "tile_name": "Camper level",
+    "tile_example": "Pitch 0.4° · Roll 1.2°",
+    "good": "Level up to",
+    "good_hint": "Up to this angle the vehicle counts as level: green.",
+    "warn": "Nearly level up to",
+    "warn_hint": "Up to this angle amber, above it red.",
+    "scale": "Bubble range",
+    "scale_hint": "The angle at which the bubble reaches the edge of the ring.",
+    "gain": "Tilt of the vans",
+    "gain_hint": "How much the vans exaggerate the angle, so a small one shows. 1 is true to life.",
+    "invert_pitch": "Turn pitch around",
+    "invert_roll": "Turn roll around",
+    "invert_hint": "When the bubble and the van tilt the wrong way, because the sensor is mounted the other way round.",
+    "card_name": "Wedges"
+  }
+}
