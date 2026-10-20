@@ -1,0 +1,34 @@
+{
+  "_meta": { "name": "Deutsch" },
+  "screen": {
+    "decimal": ",",
+    "choose": "Levelsensor wählen",
+    "offline": "Sensor offline",
+    "pitch": "Längs",
+    "roll": "Quer",
+    "level": "Eben",
+    "wedges": "Keile",
+    "no_wedges": "Keine Keilwerte im Sensor",
+    "front": "Vorne",
+    "rear": "Hinten",
+    "cm": "{n} cm"
+  },
+  "app": {
+    "name": "Camper-Wasserwaage",
+    "summary": "Wasserwaage für den Camper: Blase, kippende Fahrzeuge für Längs- und Querneigung und die Keile pro Rad.",
+    "tile_name": "Camper-Wasserwaage",
+    "tile_example": "Längs 0,4° · Quer 1,2°",
+    "good": "Eben bis",
+    "good_hint": "Bis zu diesem Winkel gilt das Fahrzeug als eben: grün.",
+    "warn": "Fast eben bis",
+    "warn_hint": "Bis zu diesem Winkel gelb, darüber rot.",
+    "scale": "Bereich der Blase",
+    "scale_hint": "Bei diesem Winkel erreicht die Blase den Rand des Rings.",
+    "gain": "Neigung der Fahrzeuge",
+    "gain_hint": "Wie stark die Fahrzeuge den Winkel übertreiben, damit auch ein kleiner sichtbar ist. 1 ist echt.",
+    "invert_pitch": "Längsneigung umdrehen",
+    "invert_roll": "Querneigung umdrehen",
+    "invert_hint": "Wenn Blase und Fahrzeug in die falsche Richtung kippen, weil der Sensor andersherum eingebaut ist.",
+    "card_name": "Keile"
+  }
+}
