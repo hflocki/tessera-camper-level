@@ -76,3 +76,5 @@ völlig freiwillig: Sie ist ein Dankeschön, keine Bezahlung. Sie kauft keinen S
 Antwortzeit und keine andere Leistung, und das Plugin bleibt für alle gleich, ob mit oder ohne Spende.
 
 [![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=hflocki&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/hflocki)
+
+☕ [buymeacoffee.com/hflocki](https://www.buymeacoffee.com/hflocki)
