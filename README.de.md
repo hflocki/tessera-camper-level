@@ -61,8 +61,6 @@ Fehlermeldungen und Ideen sind willkommen, aber bitte beachte:
 - Es gibt keinen Support und keine garantierte Antwortzeit. Ich antworte, wenn ich Zeit finde, das kann Tage oder
   Wochen dauern.
 - Nicht jeder Wunsch wird umgesetzt. Ich baue ein, was zum Plugin passt und was ich auf Dauer pflegen kann.
-- Issues sind für Fehler und konkrete Ideen, nicht zum Plaudern. Bitte nutze die Formulare, ein Thema pro Issue, und
-  gib ein 👍 statt eines „+1“- oder „bei mir auch“-Kommentars.
 - Pull Requests sind willkommen; bei größeren Änderungen bitte zuerst ein Issue öffnen, damit wir den Weg abstimmen.
 
 ### Keine Gewährleistung, keine Haftung
