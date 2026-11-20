@@ -49,3 +49,32 @@ färbt mit den Standardgrenzen (1° und 3°).
 - Ist der Levelsensor offline (MQTT Last Will), ist der Template-Sensor nicht verfügbar und die Kachel sagt das.
 - Kein Internetdienst und nichts im Netz des Displays: nur die Home-Assistant-Entität, die du wählst.
 - Läuft auf jedem Board, auch dem CYD.
+
+## Ein Hobbyprojekt
+
+Dieses Plugin ist ein privates, nicht-kommerzielles Hobbyprojekt. Ich baue und pflege es in meiner Freizeit und stelle
+es kostenlos als Open Source unter der [MIT-Lizenz](LICENSE) bereit. Es ist kostenlos und bleibt kostenlos: Es gibt
+keine Bezahlversion, keine kostenpflichtigen Funktionen und keinen bezahlten Support.
+
+Fehlermeldungen und Ideen sind willkommen, aber bitte beachte:
+
+- Es gibt keinen Support und keine garantierte Antwortzeit. Ich antworte, wenn ich Zeit finde, das kann Tage oder
+  Wochen dauern.
+- Nicht jeder Wunsch wird umgesetzt. Ich baue ein, was zum Plugin passt und was ich auf Dauer pflegen kann.
+- Issues sind für Fehler und konkrete Ideen, nicht zum Plaudern. Bitte nutze die Formulare, ein Thema pro Issue, und
+  gib ein 👍 statt eines „+1“- oder „bei mir auch“-Kommentars.
+- Pull Requests sind willkommen; bei größeren Änderungen bitte zuerst ein Issue öffnen, damit wir den Weg abstimmen.
+
+### Keine Gewährleistung, keine Haftung
+
+Das Plugin wird so bereitgestellt, wie es ist, ohne jede Gewährleistung und ohne garantierten Support, Updates oder
+Fehlerbehebungen. Die Nutzung erfolgt auf eigenes Risiko. Soweit gesetzlich zulässig, übernehme ich keine Haftung für
+Schäden oder Datenverlust durch die Nutzung. Die vollständigen Bedingungen stehen in der [MIT-Lizenz](LICENSE).
+
+### Spendier mir einen Kaffee
+
+Wenn dir das Plugin nützt und du Danke sagen möchtest, kannst du mir gern einen Kaffee spendieren. Eine Spende ist
+völlig freiwillig: Sie ist ein Dankeschön, keine Bezahlung. Sie kauft keinen Support, keine Funktionen, keine
+Antwortzeit und keine andere Leistung, und das Plugin bleibt für alle gleich, ob mit oder ohne Spende.
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=hflocki&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/hflocki)
